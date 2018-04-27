@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" rel="stylesheet"/>
+
+</head>
+<body>
+    <h1 class="display-1">Лотерея 6 из 36</h1>
+    <ul class="list-group">
+        {% for i in res %}
+            <li class="list-group-item">{{ i }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
+
