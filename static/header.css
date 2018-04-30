@@ -1,0 +1,20 @@
+header{
+	/* Включаем режим Flexbox. */
+	display: flex;
+
+	/* Распределяем элементы внутри шапки */
+	justify-content: space-between;
+
+	/* Выравниваем элементы вертикально по центру. */
+	align-items: center;
+}
+
+@media (max-width: 1000px){
+  header{
+    /* Меняем оси шапки, делая её вертикальной. */
+    flex-direction: column;
+
+    /* Выравнивание элементов шапки с начала (по левому краю). */
+    align-items: flex-start;
+  }
+}
