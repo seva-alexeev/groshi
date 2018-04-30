@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>transactions</title>
+    <link href="/static/bootstrap.min.css" rel="stylesheet"/>
+    <link href="/static/header.css" rel="stylesheet"/>
+</head>
+<body>
+    <header>
+        <div class="header-center">
+            <ul>
+                <li><a href="wallet">Кошелёк</a></li>
+                <li><a href="transact">Перевести гроши</a></li>
+                <li><a href="/">Главная страница</a></li>
+            </ul>
+        </div>
+    </header>
+    <h1 class="display-3">Перевод грошей</h1>
+    <form method="POST" action="/transact">
+        <input type= 'text' placeholder="Ваш id" name="user">
+        <input type= 'text' placeholder="кол-во монет для перевода" name="count">
+        <input type= 'text' placeholder="Кому вы переводите гроши" name="u2">
+        <button type="submit">Перевести</button>
+    </form>
+    {% if res %}
+            <h1>Всё {{res}}</h1>
+    {% endif %}
+
+</body>
+</html>
