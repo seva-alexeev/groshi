@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>wallet</title>
+        <link href="/static/bootstrap.min.css" rel="stylesheet"/>
+    <link href="/static/header.css" rel="stylesheet"/>
+</head>
+<body>
+    <header>
+        <div class="header-center">
+            <ul>
+                <li><a href="wallet">Кошелёк</a></li>
+                <li><a href="#">Топ</a></li>
+                <li><a href="/">Главная страница</a></li>
+            </ul>
+        </div>
+    </header>
+    <h1 class="display-3">Введи свой ID</h1>
+    <form method="POST" action="/wallet">
+         <input type= 'text' placeholder="Ваш id" name="user">
+         <button type="submit">Это я</button>
+    </form>
+        {% if res %}
+            <h1>На вашем счету:</h1>
+            <p>{{res}} монет</p>
+        {% endif %}
+</body>
+</html>
